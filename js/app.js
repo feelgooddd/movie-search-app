@@ -116,7 +116,7 @@ function generateWatchlistCards() {
 // Fetch movies from OMDb
 async function getMovie(title) {
   const movieTitle = title.trim().replace(/ /g, "+");
-  const baseurl = "http://www.omdbapi.com/?apikey=fdd8447e";
+  const baseurl = "https://www.omdbapi.com/?apikey=fdd8447e";
   const response = await fetch(`${baseurl}&s=${movieTitle}&type=movie`);
   const data = await response.json();
   moviesData = data.Search;
